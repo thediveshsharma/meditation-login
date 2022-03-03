@@ -1,0 +1,43 @@
+@import "./styles";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  z-index: 9999;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  mix-blend-mode: difference;
+
+  &-outer {
+    height: 3vw;
+    width: 3vw;
+    border: 0.1vw solid #fff;
+    -webkit-transition: 250ms ease-out;
+    transition: 250ms ease-out;
+  }
+
+  &-inner {
+    height: 0.5vw;
+    width: 0.5vw;
+    background-color: #fff;
+    -webkit-transition: 50ms linear;
+    transition: 50ms linear;
+  }
+}
+
+.defaultCursor {
+  -webkit-transform: scale(0.0001) translate(0%, 0%);
+  transform: scale(0.0001) translate(0%, 0%);
+  mix-blend-mode: unset;
+  -webkit-transform-origin: -20% -20%;
+  transform-origin: -20% -20%;
+}

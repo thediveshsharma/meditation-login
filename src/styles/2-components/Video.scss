@@ -1,0 +1,51 @@
+.Video {
+  display: grid;
+  grid-template-areas:
+    "videoContainer recomVideoList"
+    "videoComments recomVideoList";
+
+  padding-right: 25px;
+  //   grid-template-columns: 0.9fr 0.1fr;
+  // background-color: yellow;
+
+  &_player {
+    grid-area: videoContainer;
+    width: 65vw !important;
+    height: 55vh !important;
+    // margin: 0;
+  }
+
+  &_recommended-lists {
+    grid-area: recomVideoList;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+    // background: blue;
+  }
+
+  &_comments {
+    grid-area: videoComments;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+    // background: red;
+  }
+
+  @include down-query(984px) {
+    grid-template-areas:
+      "videoContainer"
+      "recomVideoList"
+      "videoComments";
+
+    &_player {
+      width: 100% !important;
+    }
+  }
+}
+
+
+// CommentCard
+.CommentCard {
+}

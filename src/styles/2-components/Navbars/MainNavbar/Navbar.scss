@@ -1,0 +1,18 @@
+.Navbar {
+  @include fc(1, 0);
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 56px;
+  background: white;
+  z-index: 1;
+  grid-area: navbar;
+  width: 100%;
+  position: fixed;
+  @media screen and (max-width: 656px) {
+    padding: 0 8px;
+  }
+}
+
+@import "./left";
+@import "./center";
+@import "./right";
